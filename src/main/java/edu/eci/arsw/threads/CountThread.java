@@ -11,7 +11,7 @@ package edu.eci.arsw.threads;
  */
 public class CountThread implements Runnable {
 
-    Thread myThread ;
+    Thread myThread;
     public int ini;
     public int end;
 
@@ -21,17 +21,17 @@ public class CountThread implements Runnable {
         System.out.println(inicio +" "+fin);
         myThread = new Thread(this, "my runnable thread");
         System.out.println("my thread created" + myThread);
-        threadStart();
+        //threadStart();
+        //threadRun();
     }
 
     @Override
     public void run() {
             try
             {
-                for (int i=ini ;i<end;i++)
-                {
+                for (int i=ini ;i<end ;i++) {
                     System.out.println(i);
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 }
             }
             catch(InterruptedException e)
